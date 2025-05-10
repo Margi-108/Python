@@ -33,8 +33,8 @@ def view_question():
 def delete_question():
     qid = input("Enter Question ID to delete : ")
     if qid in quiz_collection:
-        confirm = input("Are you sure?? (Y/N) : ").upper().strip()
-        if confirm == 'y':
+        confirm = input("Are you sure?? (Y/N) : ").upper()
+        if confirm == 'Y':
             del quiz_collection[qid]
             save_questions(quiz_collection)
             print(" Question Deleted!!.... ")
