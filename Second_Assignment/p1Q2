@@ -1,0 +1,208 @@
+# Write a Python program to create a list with elements of multiple data types (integers, strings, floats, etc.)
+l1 = [22,33,"python","java",20.1]
+print(l1)
+
+# Write a Python program to access elements at different index positions. 
+l1 = ["java","python","c","c++","php"]
+# for index, value in enumerate(l1):
+#     print(f"{index}: {value}")
+print(l1[0],l1[1])
+
+# Write a Python program to create a list of multiple data type elements. 
+l1 = ["python",22,"java","c++",44,55.9]
+print(l1)
+
+# Write a Python program to find the length of a list using the len() function. 
+l1 = ["python",22,"java","c++",44,55.9]
+print(len(l1))
+
+# Write a Python program to add elements to a list using insert() and append()
+l1 = ["python","java"]
+print(l1)
+l1.append("php")
+l1.insert(1,"c++")
+l1.extend(["react","android"])
+print(l1)
+
+# Write a Python program to remove elements from a list using pop() and remove()
+l1 = ["java","python","c++","php"]
+print(l1)
+l1.pop()
+l1.remove("java")
+print(l1)
+
+# Write a Python program to iterate over a list using a for loop.
+l1 = ["java","python","c++","php"]
+for i in l1:
+    print(i)
+
+# Write a Python program to sort a list using both sort() and sorted(). 
+l1 = [1,22,33,2,44,5,77,14]
+l1.sort()
+print(l1)
+print(sorted(l1))
+
+#  Write a Python program to insert elements into an empty list using a for loop and append()
+l1 = []
+for i in range(1,5):
+    l1.append(i)
+print(l1)
+
+# Write a Python program to create a tuple with multiple data types. 
+t = ("java","python",11,33)
+print(t)
+
+# Write a Python program to concatenate two tuples.
+t1 = (1,2,3)
+t2 = (11,22,33)
+t3 = t1 + t2
+print(t3)
+
+#  Write a Python program to convert a list into a tuple
+l1 = ["python","java","android","php"]
+print(l1)
+t = tuple(l1)
+print(t)
+
+# Write a Python program to access the value of the first index in a tuple
+t = ("python","java","android","php")
+print(t[0])
+
+# Write a Python program to access values between index 1 and 5 in a tuple.
+t = ("python","java","android","php","c++","c")
+print(t[1:5])
+
+# Write a Python program to access alternate values between index 1 and 5 in a tuple. 
+t = ("python","java","android","php","c++","c")
+print(t[1:6:2])
+
+# Write a Python program to access the value from the last index in a tuple. 
+t = ("python","java","android","php","c++","c")
+print(t[-1])
+
+# Write a Python program to create a dictionary with 6 key-value pairs
+d = {
+    'name' : 'margi',
+    'co_no' : 2345671829,
+    'email' : "margipatel@gmail.com",
+    'password' : 123456789,
+    'subject' : 'python',
+    'marks' : 44
+}
+print(d)
+
+# Write a Python program to access values using dictionary keys.
+d = {
+    'name' : 'margi',
+    'co_no' : 2345671829,
+    'email' : "margipatel@gmail.com",
+    'password' : 123456789,
+    'subject' : 'python',
+    'marks' : 44
+}
+print(d['name'])
+print(d['co_no'])
+print(d['email'])
+print(d['password'])
+print(d['subject'])
+print(d['marks'])
+
+# Write a Python program to update a value in a dictionary.
+d = {
+    'name' : 'margi',
+    'age' : 23,
+    'subject' : 'python'
+}
+print(d)
+d['age'] = 24
+print(d)
+
+# Write a Python program to merge two lists into one dictionary using a loop
+l1 = ["java","python","c++"]
+l2 = [11,22,33]
+
+d = {}
+
+for i in range(len(l1)):
+    d[l1[i]] = l2[i]
+print(d)
+
+#  Write a Python program to separate keys and values from a dictionary using keys() and values() methods.
+dic = {
+    'name' : 'margi',
+    'age' : 23,
+    'subject' : 'python'
+}
+print(dic.keys())
+print(dic.values())
+
+# Write a Python program to count how many times each character appears in a string
+name = "margimagii"
+d = {}
+for char in name:
+    d[char] = name.count(char)
+print(d)
+
+# Write a Python program to create a function that takes a string as input and prints it
+def myfun():
+    print("HELLO MY NAME IS MARGI.....")
+myfun()
+
+#  Write a Python program to create a parameterized function that takes two arguments and prints their sum.
+def sum(num1,num2):
+    ans = num1 + num2
+    print(ans)
+sum(10,20)
+
+# Write a Python program to create a lambda function with one expression
+result = lambda n : n * n
+print(result(5))
+
+# Write a Python program to create a lambda function with two expressions
+ans = lambda n1,n2 : (n1 + n2,n1 - n2)
+print(ans(30,20))
+
+# Write a Python program to import the math module and use functions like sqrt(), ceil(), floor()
+import math
+print(math.sqrt(120))
+print(math.floor(22.30))
+print(math.ceil(22.30))
+
+# Write a Python program to generate random numbers using the random module
+import random
+result = random.randint(1,100)
+print(result)
+
+# Write a Python program to apply the map() function to square a list of numbers. 
+l1 = [1,2,3,4,5,6]
+print(list(map(lambda n : n * n,l1)))
+
+# Write a Python program that uses reduce() to find the product of a list of numbers
+from functools import reduce
+l1 = [1,2,3,4,5]
+def add(num1,num2):
+    return num1 + num2
+result = reduce(add,l1,100)
+print(result)
+print(reduce(lambda x,y : x * y,l1))
+
+# Write a Python program that filters out even numbers using the filter() function
+l1 = [1,2,3,4,5]
+l2 = list(filter(lambda n : n%2 == 0,l1))
+print(l2)
+
+# Write a generator function that generates the first 10 even numbers
+def myfun():
+    num = 0
+    count = 0
+    while count < 10:
+        yield num
+        num += 2
+        count+= 1
+
+for even in myfun():
+    print(even)
+
+
+
+
